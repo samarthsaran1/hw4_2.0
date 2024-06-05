@@ -9,6 +9,7 @@ class UsersController < ApplicationController
       @user["email"] = params["email"]
       @user["password"] = BCrypt::Password.create(params["password"])
       @user.save
+      flash["notice"] = "Account Successfully Created"
       redirect_to "/login"
     end
   end
