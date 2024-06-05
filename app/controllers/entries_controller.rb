@@ -18,7 +18,7 @@ class EntriesController < ApplicationController
     @entry.save
     redirect_to "/places/#{@entry["place_id"]}"
     else
-      https://github.com/samarthsaran1/hw4_2.0
+    flash["notice"] = "Please login before proceeding"
     redirect_to "/login"
     end
   end
